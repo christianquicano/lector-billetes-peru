@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HCa-hs-uaZ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vision View Controller-->
+        <scene sceneID="ZR8-rp-s26">
+            <objects>
+                <viewController id="HCa-hs-uaZ" customClass="VisionViewController" customModule="Lector_Billetes_Perú" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XDr-T5-kak">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-JS-o8i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uY-8U-XdP">
+                                <rect key="frame" x="321" y="60" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" hint="info" label="info"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showInfoView:" destination="HCa-hs-uaZ" eventType="touchUpInside" id="S2V-Kh-h7n"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u06-Zh-dbP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76j-mg-EWL">
+                                        <rect key="frame" x="8" y="8" width="359" height="495"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Este aplicativo es una herramienta que ayuda a identificar el valor de los billetes con denominación peruana, esta orientado para las persona con discapacidad visual.
+
+Reconoce billetes de 10, 20, 50, 100 y 200 nuevos soles.
+
+Funciona mediante un modelo de inteligencia artificial que permite el reconocimiento del billetes mediante el uso de la cámara.
+
+Estos son los pasos para el correcto uso de la herramienta:
+-	El celular no debe encontrarse en silencio o vibrador.
+-	Estira el billete.
+-	Mantén enfocado el billete.
+-	Cuando el aplicativo reconozca el valor del billete reproducirá su valor.
+-	Recuerda que tienes que enfocar gran cantidad del billete para un mejor reconocimiento.</string>
+                                        <color key="textColor" name="LabelColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBX-SS-egp">
+                                        <rect key="frame" x="8" y="589" width="359" height="70"/>
+                                        <color key="backgroundColor" name="BackgroundButtonColor"/>
+                                        <accessibility key="accessibilityConfiguration" hint="cerrar" label="cerrar"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Cjb-VR-dgb"/>
+                                        </constraints>
+                                        <state key="normal" title="CERRAR">
+                                            <color key="titleColor" name="LabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeInfoView:" destination="HCa-hs-uaZ" eventType="touchUpInside" id="W39-Fp-Cpa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIz-4d-RgR">
+                                        <rect key="frame" x="8" y="511" width="359" height="70"/>
+                                        <color key="backgroundColor" name="BackgroundButtonColor"/>
+                                        <accessibility key="accessibilityConfiguration" hint="cerrar" label="cerrar"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="7mp-0k-T1m"/>
+                                        </constraints>
+                                        <state key="normal" title="NO VOLVER A MOSTRAR">
+                                            <color key="titleColor" name="LabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeForEverInfoView:" destination="HCa-hs-uaZ" eventType="touchUpInside" id="6vp-Fi-tGQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="76j-mg-EWL" firstAttribute="top" secondItem="u06-Zh-dbP" secondAttribute="top" constant="8" id="1nc-Qf-5qj"/>
+                                    <constraint firstAttribute="trailing" secondItem="76j-mg-EWL" secondAttribute="trailing" constant="8" id="29s-BT-g02"/>
+                                    <constraint firstItem="XIz-4d-RgR" firstAttribute="leading" secondItem="UBX-SS-egp" secondAttribute="leading" id="2bw-Oa-Wze"/>
+                                    <constraint firstItem="XIz-4d-RgR" firstAttribute="top" secondItem="76j-mg-EWL" secondAttribute="bottom" constant="8" id="3HR-JQ-ZmA"/>
+                                    <constraint firstItem="UBX-SS-egp" firstAttribute="leading" secondItem="u06-Zh-dbP" secondAttribute="leading" constant="8" id="HnN-g2-QQe"/>
+                                    <constraint firstAttribute="bottom" secondItem="UBX-SS-egp" secondAttribute="bottom" constant="8" id="HtJ-aL-7r8"/>
+                                    <constraint firstItem="XIz-4d-RgR" firstAttribute="trailing" secondItem="UBX-SS-egp" secondAttribute="trailing" id="Kib-fU-rne"/>
+                                    <constraint firstItem="UBX-SS-egp" firstAttribute="top" secondItem="XIz-4d-RgR" secondAttribute="bottom" constant="8" id="Vtu-qe-7Qz"/>
+                                    <constraint firstAttribute="trailing" secondItem="UBX-SS-egp" secondAttribute="trailing" constant="8" id="mNN-7L-v2a"/>
+                                    <constraint firstItem="76j-mg-EWL" firstAttribute="leading" secondItem="u06-Zh-dbP" secondAttribute="leading" constant="8" id="oPC-Hh-xCv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="u06-Zh-dbP" firstAttribute="top" secondItem="eGj-XT-A7V" secondAttribute="top" id="0ya-k1-e0W"/>
+                            <constraint firstItem="u06-Zh-dbP" firstAttribute="bottom" secondItem="eGj-XT-A7V" secondAttribute="bottom" id="GQX-fe-ut1"/>
+                            <constraint firstItem="u06-Zh-dbP" firstAttribute="leading" secondItem="eGj-XT-A7V" secondAttribute="leading" id="e0i-1u-xDh"/>
+                            <constraint firstItem="u06-Zh-dbP" firstAttribute="trailing" secondItem="eGj-XT-A7V" secondAttribute="trailing" id="xgq-6J-MYb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eGj-XT-A7V"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoView" destination="u06-Zh-dbP" id="XZD-2k-TRY"/>
+                        <outlet property="previewView" destination="mRj-JS-o8i" id="1JG-KH-K52"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWI-eD-u1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundButtonColor">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
